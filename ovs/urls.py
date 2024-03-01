@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import path
 from poll import views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -17,9 +17,8 @@ urlpatterns = [
     path('result/', views.resultView, name='result'),
     path('changepass/', views.changePasswordView, name='changepass'),
     path('editprofile/', views.editProfileView, name='editprofile'),
-    
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
 admin.site.site_header = "Online Voting System"
