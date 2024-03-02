@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'o0%4arn*&k50_$asckk9b99+)uci5$+y6w87nh*n^a%4e((y+#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app',".now.sh"]
 
 
 # Application definition
@@ -74,6 +74,17 @@ WSGI_APPLICATION = 'ovs.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',                      
+#         'USER': 'postgres',
+#         'PASSWORD': 'uChVQyiBOeZOTSlLql1f',
+#         'HOST': 'containersus-west196.railway.app',
+#         'PORT': '6625',
+#     }
+
+# }
 
 DATABASES = {
     'default': {
@@ -120,7 +131,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-LOGIN_URL = '/login/'
+LOGIN_URL = 'login/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATIC_ROOT = os.path.join(BASE_DIR,"staticfiles_build",'static')
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR,"media")
