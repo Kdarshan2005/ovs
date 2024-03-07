@@ -25,7 +25,7 @@ SECRET_KEY = 'o0%4arn*&k50_$asckk9b99+)uci5$+y6w87nh*n^a%4e((y+#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app',".now.sh"]
+ALLOWED_HOSTS = ['https://workspace-playground-2986c19e-d99583de.zvgz4d.on-acorn.io/']
 
 
 # Application definition
