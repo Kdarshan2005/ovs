@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'o0%4arn*&k50_$asckk9b99+)uci5$+y6w87nh*n^a%4e((y+#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://workspace-playground-2986c19e-d99583de.zvgz4d.on-acorn.io/']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'poll',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

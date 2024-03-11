@@ -8,6 +8,10 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth.decorators import login_required
 from .models import Candidate,ControlVote,Position
 from .forms import ChangeForm
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
+
 
 def homeView(request):
     return render(request, "poll/home.html")
